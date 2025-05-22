@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IronX GYM</title>
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlede6cCiKZUrMbps6xR6lDnas-qxfsUTfFg&s"
+      type="images"
+    />
+    <link
+      rel="icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlede6cCiKZUrMbps6xR6lDnas-qxfsUTfFg&s"
+      type="images"
+    />
+    <!-- رابط أيقونات Font Awesome للروابط -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+      }
+
+      /* شريط التنقل (Navbar) */
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+      }
+
+      .navbar .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff6b00;
+      }
+
+      .navbar .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+      }
+
+      .navbar .nav-links a:hover {
+        color: orangered;
+      }
+
+      /* الخلفية مع صورة */
+      .hero {
+        height: 100vh;
+        background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnm768GEufy5qMVlyyU9zzacS5p_qd6ggHyQ&s);
+        background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .container {
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+      }
+
+      .slogan {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
+        opacity: 0.8;
+      }
+
+      .btn {
+        background-color: #ff6b00;
+        color: white;
+        align-items: center;
+
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border-radius: 15px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        background-color: rgb(35, 35, 112);
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* المحتوى الإضافي */
+      .content {
+        padding: 100px 20px;
+        text-align: center;
+      }
+
+      .features {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-top: 50px;
+      }
+
+      .feature {
+        background: #f8f9fa;
+        color: #333;
+        padding: 30px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+      }
+
+      .feature:hover {
+        transform: translateY(-10px);
+      }
+
+      .feature i {
+        font-size: 2.5rem;
+        color: #ff6b00;
+        margin-bottom: 20px;
+      }
+
+      .feature h3 {
+        margin-bottom: 15px;
+      }
+
+      footer {
+        background: #333;
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+
+      .social-links {
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- شريط التنقل بأيقونات -->
+    <nav class="navbar">
+      <div class="logo">IronX GYM</div>
+      <div class="nav-links">
+        <a href="s01.html"><i class="fas fa-home"></i> Home</a>
+        <a href="about.html"><i class="fas fa-info-circle"></i> about </a>
+        <a href="services.html"><i class="fas fa-dumbbell"></i>Workout</a>
+        <a href="00.html"><i class="fas fa-envelope"></i>contact Us</a>
+      </div>
+    </nav>
+
+    <!-- الواجهة الرئيسية مع صورة خلفية -->
+    <section class="hero">
+      <div class="container">
+        <h1>Your journey starts here</h1>
+        <p>where cutting-edge equipment meets next-level training</p>
+        <div class="slogan">No pain-No gain</div>
+        <button class="btn">Get Started now</button>
+      </div>
+    </section>
+
+    <!-- مميزات الصالة -->
+    <section class="content" style="background: white; color: #333">
+      <h2>why IronX GYM !!</h2>
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-dumbbell"></i>
+          <h3>أحدث الأجهزة</h3>
+          <p>نوفر لك أحدث الأجهزة الرياضية ذات الجودة العالمية</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-user-tie"></i>
+          <h3>مدربون محترفون</h3>
+          <p>فريق من المدربين المعتمدين دولياً لمساعدتك في تحقيق أهدافك</p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-clock"></i>
+          <h3>أوقات مرنة</h3>
+          <p>نعمل من الساعة 6 صباحاً حتى 12 مساءً طوال أيام الأسبوع</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 IronX GYM - جميع الحقوق محفوظة</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+        <a href="#"><i class="fab fa-snapchat"></i></a>
+      </div>
+    </footer>
+
+    <script>
+      // التمرير السلس عند النقر على الزر
+      document.querySelector(".btn").addEventListener("click", () => {
+        document.querySelector(".features").scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>
